@@ -10,5 +10,8 @@ export class ApiService {
 
   }
 
+  Carprodact(){
+    return this.http.get('https://rentcar.stepprojects.ge/api/Car')
+  }
 
 }
