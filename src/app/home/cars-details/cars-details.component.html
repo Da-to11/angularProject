@@ -1,1 +1,23 @@
-<p>cars-details works!</p>
+
+
+
+
+<div class="ccard">
+    <div class="foto">
+        <img [src]="carProducts.imageUrl1" alt="">        
+    </div>
+
+    <div class="detals">
+        <div class="detchild">
+            <h3>ბრენდი - {{carProducts.brand}}</h3>
+            <h3>ტევადობა - {{carProducts.capacity}}</h3>
+            <h3>ქალაქი - {{carProducts.city}}</h3>
+            <h3>საწვავის ტევადობა - {{carProducts.fuelCapacity}}</h3>
+            <h3>მოდელი - {{carProducts.model}}</h3>
+            <h3>{{carProducts.transmission}}</h3>
+            <h3>წელი - {{carProducts.year}}</h3>
+            <h3>ფასი - {{carProducts.price}}</h3>
+        </div>
+
+    </div>
+</div>

@@ -11,7 +11,12 @@ export class ApiService {
   }
 
   Carprodact(){
-    return this.http.get('https://rentcar.stepprojects.ge/api/Car')
+    return this.http.get('https://rentcar.stepprojects.ge/api/Car/paginated?pageIndex=1&pageSize=28')
+  }
+
+
+  singleCar(id : number){
+    return this.http.get(`https://rentcar.stepprojects.ge/api/Car/${id}`)
   }
 
 }

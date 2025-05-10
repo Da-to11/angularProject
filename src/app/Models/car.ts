@@ -2,7 +2,7 @@
 
 export class Car{
     id!: number;
-    barand?: string;
+    brand?: string;
     model?: string;
     year?: number;
     imageUrl1?: string;

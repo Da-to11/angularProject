@@ -30,7 +30,7 @@ export class HomeComponent {
   ngOnInit(){
     this.api.Carprodact().subscribe((data : any) => {
       console.log(data)
-      this.cars = data
+      this.cars = data.data
     })
   }
 

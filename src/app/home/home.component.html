@@ -2,12 +2,12 @@
 
 <div class="product-place">
     <div class="card" *ngFor="let el of cars">
-        <img [src]="el.imageUrl1" alt="">
+        <img routerLink="/cardetail/{{el.id}}" [src]="el.imageUrl1" alt="">
         <div class="card-body">
             <p>{{el.year}}</p>
             <p>{{el.city}}</p>
             <p>{{el.price}}/ლ</p>
-            <p>{{el.barand}}</p>        
+            <p>{{el.brand}}</p>       
         </div>
     </div>
 </div>
