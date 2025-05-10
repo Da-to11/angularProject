@@ -1,0 +1,111 @@
+
+.register{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    .register-parent{
+        width: 400px;
+        height: 650px;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 25px;
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        input{
+            width: 340px;
+            height: 45px;
+            outline: none;
+            padding-left: 10px;
+            border-radius: 8px;
+            border: 1px solid black;
+            background-color: rgb(245, 245, 245);
+        }
+
+
+        input:focus{
+            outline: 1px solid blue;
+        }
+
+        .btn{
+            width: 340px;
+            height: 45px;
+            cursor: pointer;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 8px;
+            background-color: blue;
+            color: white;
+        }
+
+        .p-parent{
+            display: flex;
+            gap: 5px;
+            height: 5px;
+
+            .S{
+                color: blue;
+                cursor: pointer;
+            }
+        }
+
+        .forline{
+            width: 100%;
+            height: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            .line{
+                width: 150px;
+                height: 1px;
+                background-color: black;
+            }
+        }
+
+
+        .social{
+          width: 100%;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 40px;
+
+        .socials{
+            width: 60px;
+            height: 60px;
+            border: 1px solid rgba(156, 156, 156, 0.483);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            cursor: pointer;
+
+
+        img{
+            width: 40px;
+            height: 40px;
+        }
+
+        }
+
+        .socials:hover{
+           border: 1px solid black;
+           transition: 400ms;
+        }
+
+    }
+
+
+
+
+ }
+
+
+}
