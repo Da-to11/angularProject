@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -8,5 +9,14 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+
+  constructor(private vps : ViewportScroller){
+
+  }
+
+
+  scrol(){
+    this.vps.scrollToAnchor('footer')
+  }
 
 }
