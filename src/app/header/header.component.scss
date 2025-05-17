@@ -1,4 +1,10 @@
 
+@font-face {
+    font-family: 'manfont';
+    src: url(../../../public/fonts/Roboto/Roboto-Italic-VariableFont_wdth\,wght.ttf);
+}
+
+
 
 .head{
     width: 100%;
@@ -7,6 +13,8 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    font-family: 'manfont';
+    background-color: black;
     .logo{
         width: 50%;
         height: 80px;
@@ -15,18 +23,18 @@
         padding-left: 10px;
         gap: 30px;
         .logo-child{
-            width: 130px;
-            height: 40px;
+            width: 132px;
+            height: 42px;
             border-radius: 20px;
-            background-color: rgb(44, 44, 255);
+            background-color: rgb(82, 82, 82);;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
 
             .logo2-child{
-                width: 83px;
-                height: 30px;
+                width: 85px;
+                height: 32px;
                 border-radius: 20px;
                 background-color: white;
                 display: flex;
@@ -61,18 +69,23 @@
             flex-wrap: wrap;
 
             li{
-                width: 110px;
+                width: 140px;
                 height: 40px;
-                background-color: white;
+                background-color: rgb(96, 96, 96);
                 border-radius: 10px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
-                border: 1px solid rgb(166, 166, 166);
+                border: none;
+                
                 
                 a{
-                    color: black;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 7px;
                 }
             }
 

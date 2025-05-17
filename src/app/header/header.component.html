@@ -2,7 +2,7 @@
 
 <div class="head">
     <div class="logo">
-        <div class="logo-child">
+        <div routerLink="/home" class="logo-child">
             <div class="logo2-child">
                 <h2>myauto</h2>
             </div>
@@ -15,9 +15,8 @@
 
     <nav>
         <ul>
-            <li routerLink="/home"><a>მთავარი</a></li>
-            <li (click)="scrol()" ><a>კონტაქტები</a></li>
-            <li routerLink="/register" ><a>რეგისტრაცია</a></li>
+            <li (click)="scrol()" ><a><i class="fa-solid fa-phone"></i>კონტაქტები</a></li>
+            <li routerLink="/register" ><a><i class="fa-solid fa-user"></i>რეგისტრაცია</a></li>
         </ul>
     </nav>
 </div>

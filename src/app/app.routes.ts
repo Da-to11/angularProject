@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
-import { FooterComponent } from './footer/footer.component';
 import { CarsDetailsComponent } from './home/cars-details/cars-details.component';
 import { RegistComponent } from './regist/regist.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
     // {path: '', redirectTo: 'home', pathMatch: 'full'}
@@ -11,5 +11,6 @@ export const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'cardetail/:id', component: CarsDetailsComponent},
     {path: 'register', component: RegistComponent},
+    {path: 'login', component: LoginComponent},
     {path: '**', component: ErrorpageComponent}
 ];

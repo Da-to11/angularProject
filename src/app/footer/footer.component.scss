@@ -7,8 +7,7 @@
     justify-content: space-around;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    background-color: white;
-    border: 1px solid gray;
+    background-color: black;
     flex-wrap: wrap;
     .foot-box1{
         width: 300px;
@@ -30,7 +29,7 @@
 
         p:hover{
             text-decoration: underline;
-            color: black;
+            color: white;
         }
     }
 
@@ -53,7 +52,7 @@
 
         p:hover{
             text-decoration: underline;
-            color: black;
+            color: white;
         }
     }
 

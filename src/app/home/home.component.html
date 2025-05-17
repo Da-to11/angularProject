@@ -1,13 +1,33 @@
 
 
+
+
 <div class="product-place">
+
+
+    <div class="filter">
+        <input placeholder="Capacity" type="text">
+        <input placeholder="city" type="text">
+        <input placeholder="Startyear" type="text">
+        <input placeholder="Endyear" type="text">
+        <button class="btn" ><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+        <button class="btn" ><i class="fa-solid fa-broom"></i>Filter</button>
+    </div>
+
+
+
+
     <div class="card" *ngFor="let el of cars">
         <img routerLink="/cardetail/{{el.id}}" [src]="el.imageUrl1" alt="">
         <div class="card-body">
-            <p>{{el.year}}</p>
+            <h3>{{el.brand}} - {{el.year}}</h3>
             <p>{{el.city}}</p>
-            <p>{{el.price}}/ლ</p>
-            <p>{{el.brand}}</p>       
+            <p>{{el.price}}/ლ</p>   
         </div>
+    </div>
+
+
+    <div class="smBasket">
+        <i class="fa-solid fa-basket-shopping"></i>
     </div>
 </div>
