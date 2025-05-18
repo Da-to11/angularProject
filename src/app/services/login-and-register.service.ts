@@ -14,6 +14,11 @@ export class LoginAndRegisterService {
   }
 
 
+  login(loged : any){
+    return this.loginRegister.post('https://rentcar.stepprojects.ge/api/Users/login', loged)
+  }
+
+
 
 
 //   {

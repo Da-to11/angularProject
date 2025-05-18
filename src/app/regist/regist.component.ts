@@ -27,13 +27,21 @@ export class RegistComponent {
 
   register(){
     let registered = {
-      firstname : this.firstName,
-      lastname : this.lastName,
+      firstName : this.firstName,
+      lastName : this.lastName,
       email : this.email,
-      phonenumber : this.phoneNumber,
+      phoneNumber : this.phoneNumber.toString(),
       password : this.password
     }
     
     this.reg.Register(registered).subscribe(resp => console.log(resp))
+
+    this.firstName = ""
+    this.lastName = ""
+    this.email = ""
+    this.phoneNumber = ""
+    this.password = ""
+
+    
   }
 }

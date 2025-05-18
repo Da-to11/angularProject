@@ -4,12 +4,12 @@
     <form action="">
      <div class="register-parent">
          <h1>შესვლა</h1>
-         <input type="text" placeholder="სახელი" required>
-         <input type="text" placeholder="გვარი" required>
-         <input type="email" placeholder="ელფოსტის მისამართი" required>
-         <input type="number" placeholder="ტელეფონის ნომერი" required>
-         <input type="password" placeholder="პაროლი" required>
-         <button class="btn" ><h3>შესვლა</h3></button>
+         <input name="first" [(ngModel)]="firstName" type="text" placeholder="სახელი" required>
+         <input name="last" [(ngModel)]="lastName" type="text" placeholder="გვარი" required>
+         <input name="ema" [(ngModel)]="email" type="email" placeholder="ელფოსტის მისამართი" required>
+         <input name="numb" [(ngModel)]="phoneNumber" type="number" placeholder="ტელეფონის ნომერი" required>
+         <input name="pass" [(ngModel)]="password" type="password" placeholder="პაროლი" required>
+         <button (click)="logIn()" class="btn" ><h3>შესვლა</h3></button>
          <div class="p-parent">
             <p>არ ხართ რეგისტრირებული?</p><p routerLink="/register" class="S" >რეგისტრაცია</p>
          </div>
