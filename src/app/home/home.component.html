@@ -6,12 +6,12 @@
 
 
     <div class="filter">
-        <input placeholder="Capacity" type="text">
-        <input placeholder="city" type="text">
-        <input placeholder="Startyear" type="text">
-        <input placeholder="Endyear" type="text">
+        <input [(ngModel)]="Capa" placeholder="Capacity" type="text">
+        <input [(ngModel)]="city" placeholder="city" type="text">
+        <input [(ngModel)]="startyear" placeholder="Startyear" type="text">
+        <input [(ngModel)]="endyear" placeholder="Endyear" type="text">
         <button class="btn" ><i class="fa-solid fa-magnifying-glass"></i>Search</button>
-        <button class="btn" ><i class="fa-solid fa-broom"></i>Filter</button>
+        <button class="btn" ><i class="fa-solid fa-broom"></i>Clear</button>
     </div>
 
 

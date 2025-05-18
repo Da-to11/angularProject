@@ -13,7 +13,7 @@ import { ApiService } from '../services/api.service';
 })
 export class HomeComponent {
 
-  constructor(private api : ApiService){
+  constructor(private api : ApiService, ){
 
   }
 
@@ -33,6 +33,16 @@ export class HomeComponent {
       this.cars = data.data
     })
   }
+
+  Capa : string = ""
+  city : string = ""
+  startyear : string = ""
+  endyear : string = ""
+
+ 
+
+
+
 
 
 }

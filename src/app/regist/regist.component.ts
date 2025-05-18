@@ -11,5 +11,29 @@ import { LoginAndRegisterService } from '../services/login-and-register.service'
   styleUrl: './regist.component.scss'
 })
 export class RegistComponent {
-  constructor(private rout : ActivatedRoute, private reg : LoginAndRegisterService){ }
+  constructor(private rout : ActivatedRoute, private reg : LoginAndRegisterService){ 
+    
+  }
+
+
+  firstName : string = ""
+  lastName : string = ""
+  email : string = ""
+  phoneNumber : string = ""
+  password : string = ""
+
+
+
+
+  register(){
+    let registered = {
+      firstname : this.firstName,
+      lastname : this.lastName,
+      email : this.email,
+      phonenumber : this.phoneNumber,
+      password : this.password
+    }
+    
+    this.reg.Register(registered).subscribe(resp => console.log(resp))
+  }
 }
