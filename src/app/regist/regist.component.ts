@@ -34,7 +34,10 @@ export class RegistComponent {
       password : this.password
     }
     
-    this.reg.Register(registered).subscribe(resp => console.log(resp))
+    this.reg.Register(registered).subscribe(resp => {
+      console.log(resp)
+      
+    })
 
     this.firstName = ""
     this.lastName = ""

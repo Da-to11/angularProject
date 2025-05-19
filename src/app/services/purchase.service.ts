@@ -10,5 +10,13 @@ export class PurchaseService {
 
 
 
+  purchasee(obj : any){
+    this.purchase.post(`https://rentcar.stepprojects.ge/Purchase/purchase?phoneNumber=1234123412345&carId=520&multiplier=1`, obj)
+  }
+
+
+  getPur(){
+    this.purchase.get('https://rentcar.stepprojects.ge/Purchase/1234123412345')
+  }
 
 }

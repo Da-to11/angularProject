@@ -6,7 +6,11 @@
     align-items: center;
     justify-content: center;
     margin-top: 80px;
-    background-color: rgb(49, 49, 49);
+    // background-color: rgb(49, 49, 49);
+    background-image: url(../../../public/img/car.mn.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     .register-parent{
         width: 400px;
         height: 650px;
@@ -18,7 +22,9 @@
         gap: 25px;
         border-radius: 8px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        background-color: white;
+        backdrop-filter: blur(15px);
+        
+
         input{
             width: 340px;
             height: 45px;
@@ -31,7 +37,7 @@
 
 
         input:focus{
-            outline: 1px solid blue;
+            outline: 2px solid black;
         }
 
         .btn{
@@ -58,6 +64,10 @@
             .S{
                 color: blue;
                 cursor: pointer;
+            }
+
+            .ss{
+                color: white;
             }
         }
 
@@ -94,6 +104,7 @@
             justify-content: center;
             border-radius: 8px;
             cursor: pointer;
+            background-color: white;
 
 
         img{

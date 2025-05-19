@@ -6,12 +6,12 @@
 
 
     <div class="filter">
-        <input [(ngModel)]="Capa" placeholder="Capacity" type="text">
+        <input [(ngModel)]="capaCity" placeholder="Capacity" type="text">
         <input [(ngModel)]="city" placeholder="city" type="text">
-        <input [(ngModel)]="startyear" placeholder="Startyear" type="text">
-        <input [(ngModel)]="endyear" placeholder="Endyear" type="text">
-        <button class="btn" ><i class="fa-solid fa-magnifying-glass"></i>Search</button>
-        <button class="btn" ><i class="fa-solid fa-broom"></i>Clear</button>
+        <input [(ngModel)]="startYear" placeholder="Startyear" type="text">
+        <input [(ngModel)]="endYear" placeholder="Endyear" type="text">
+        <button (click)="filterFunc()" class="btn" ><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+        <button (click)="clear()" class="btn" ><i class="fa-solid fa-broom"></i>Clear</button>
     </div>
 
 
@@ -20,14 +20,20 @@
     <div class="card" *ngFor="let el of cars">
         <img routerLink="/cardetail/{{el.id}}" [src]="el.imageUrl1" alt="">
         <div class="card-body">
-            <h3>{{el.brand}} - {{el.year}}</h3>
-            <p>{{el.city}}</p>
-            <p>{{el.price}}/ლ</p>   
+            <div class="body">
+                <h3>{{el.brand}} - {{el.year}}</h3>
+                <p>{{el.city}}</p>
+                <p>{{el.price}}/ლ</p> 
+            </div>
+  
+            <div class="Purchase">
+                <button class="btn2" >Purchase</button>
+            </div>
         </div>
     </div>
 
 
-    <div class="smBasket">
+    <div routerLink="/purchase" class="smBasket">
         <i class="fa-solid fa-basket-shopping"></i>
     </div>
 </div>

@@ -15,7 +15,7 @@
     flex-wrap: wrap;
     font-family: 'manfont';
     background-color: black;
-
+    z-index: 3;
 
     .logo{
         width: 50%;
@@ -102,8 +102,22 @@
 
 }
 
-            @media screen and (max-width: 624px) {
-        .head{
-            height: 119px;
-        }
+.head:hover{
+    height: 95px;
+    transition: 500ms;
+}
+
+@media screen and (max-width: 624px) {
+    .head{
+        height: 119px;
     }
+
+
+    .head:hover{
+        height: 125px;
+        transition: 500ms;
+        
+    }
+
+
+}

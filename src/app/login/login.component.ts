@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { LoginAndRegisterService } from '../services/login-and-register.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Token } from '@angular/compiler';
 
 @Component({
   selector: 'app-login',
@@ -14,6 +15,8 @@ export class LoginComponent {
   constructor(private log : LoginAndRegisterService){
 
   }
+
+  
 
 
     firstName : string = ""
@@ -35,7 +38,9 @@ export class LoginComponent {
     
 
 
-    this.log.login(registered).subscribe(user => console.log(user))
+    this.log.login(registered).subscribe(user => {
+      console.log(user)
+    })
 
     
     this.firstName = ""

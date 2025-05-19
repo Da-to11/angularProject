@@ -2,6 +2,7 @@
 
     <form action="">
      <div class="register-parent">
+        
          <h1>რეგისტრაცია</h1>
          <input name="first" [(ngModel)]="firstName" type="text" placeholder="სახელი" required>
          <input name="last" [(ngModel)]="lastName" type="text" placeholder="გვარი" required>
@@ -9,8 +10,9 @@
          <input name="numb" [(ngModel)]="phoneNumber" type="number" placeholder="ტელეფონის ნომერი" required>
          <input name="pass" [(ngModel)]="password" type="password" placeholder="პაროლი" required>
          <button (click)="register()" class="btn" ><h3>რეგისტრაცია</h3></button>
+         
          <div class="p-parent">
-            <p>ხართ რეგისტრირებული?</p><p routerLink="/login" class="S" >შესვლა</p>
+            <p class="ss" >ხართ რეგისტრირებული?</p><p routerLink="/login" class="S" >შესვლა</p>
          </div>
 
          <div class="forline">
@@ -25,6 +27,7 @@
                 <div class="socials"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCvh-j7HsTHJ8ZckknAoiZMx9VcFmsFkv72g&s" alt=""></div>
             </div>
      </div>
-    </form>
+     </form>
+    
 
 </div>

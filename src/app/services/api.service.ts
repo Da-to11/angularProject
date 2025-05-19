@@ -20,8 +20,8 @@ export class ApiService {
   }
 
 
-  filterGet(){
-    return this.http.get('https://rentcar.stepprojects.ge/api/Car/filter?capacity=4&startYear=2005&endYear=2025&city=%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98&pageIndex=1&pageSize=10')
+  filterGet(capacity : string, city : string, startYear : string, endYear : string ){
+    return this.http.get(`https://rentcar.stepprojects.ge/api/Car/filter?capacity=${capacity}&startYear=${startYear}&endYear=${endYear}&city=${city}&pageIndex=1&pageSize=10`)
   }
 
 }
