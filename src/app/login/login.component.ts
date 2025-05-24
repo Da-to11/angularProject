@@ -38,8 +38,9 @@ export class LoginComponent {
     
 
 
-    this.log.login(registered).subscribe(user => {
+    this.log.login(registered).subscribe((user : any) => {
       console.log(user)
+      localStorage.setItem('token', user.token)
     })
 
     
@@ -50,8 +51,6 @@ export class LoginComponent {
     this.password = ""
 
     }
-
-
 
 
 }

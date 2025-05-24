@@ -70,9 +70,7 @@ export class HomeComponent {
 
 
 
-  pursh(){
-    this.pur.purchasee(this.cars)
-  }
+
 
 
 
