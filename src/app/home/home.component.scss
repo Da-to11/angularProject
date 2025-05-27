@@ -81,26 +81,6 @@
             display: flex;
             justify-content: space-between;
             
-            .Purchase{
-                width: 150px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                .btn2{
-                    width: 100px;
-                    height: 35px;
-                    border: none;
-                    border-radius: 8px;
-                    color: white;
-                    background-color: blue;
-                    cursor: pointer;
-                }
-
-                .btn2:hover{
-                    margin-top: 5px;
-                }
-            }
 
         }
     }

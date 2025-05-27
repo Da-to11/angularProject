@@ -54,6 +54,7 @@ export class HomeComponent {
   endYear : string = ""
 
  
+ 
 
   filterFunc(){
     this.api.filterGet(this.capaCity, this.city, this.startYear, this.endYear).subscribe((filterd : any) => {
@@ -73,25 +74,8 @@ export class HomeComponent {
     this.endYear = ""
   }
 
-  Number : any 
-  mut : number = 0
-  carunia : any
-
-  buy(){
-
-    this.Number = localStorage.getItem('number')
-    this.mut = 1
-    this.carunia = localStorage.getItem('carid')
 
 
-    this.pur.purchasee(this.Number, this.carunia, this.mut).subscribe((resp : any) => {
-      console.log(resp)
-
-    
-    })
-
-    
-  }
 
 
 }

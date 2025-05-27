@@ -44,11 +44,37 @@
         border-bottom: 1px solid black;
         background-color: rgb(20, 20, 20);
         color: white;
+        flex-direction: column;
+        gap: 20px;
         .detchild{
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
+
+
+            .Purchase{
+                width: 150px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .btn2{
+                    width: 180px;
+                    height: 35px;
+                    border: none;
+                    border-radius: 8px;
+                    color: white;
+                    background-color: blue;
+                    cursor: pointer;
+                }
+
+                .btn2:hover{
+                    margin-top: 5px;
+                    box-shadow: rgba(34, 0, 255, 0.418) 0px 14px 28px, rgba(13, 0, 255, 0.387) 0px 10px 10px;
+                }
+            }
+        
         
     }
 }
@@ -89,6 +115,8 @@
             flex-direction: column;
             gap: 20px;
         }
+
+        
         
     }
 

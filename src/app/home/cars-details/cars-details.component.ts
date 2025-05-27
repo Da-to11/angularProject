@@ -4,6 +4,7 @@ import { ApiService } from '../../services/api.service';
 import { Car } from '../../Models/car';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { PurchaseService } from '../../services/purchase.service';
 
 @Component({
   selector: 'app-cars-details',
@@ -13,7 +14,7 @@ import { CommonModule } from '@angular/common';
 })
 export class CarsDetailsComponent {
 
-  constructor(private rout : ActivatedRoute, private api : ApiService){
+  constructor(private rout : ActivatedRoute, private api : ApiService, private pur : PurchaseService){
     this.rout.params.subscribe(car  => {
       console.log(car['id'])
       this.cardId = car['id']
@@ -36,6 +37,36 @@ export class CarsDetailsComponent {
   }
 
 
-  
+
+
+
+  Number : any 
+  mut : number = 0
+  carunia : any
+
+
+  buy(){
+
+    this.Number = localStorage.getItem('number')
+    this.mut = 1
+    this.carunia = localStorage.getItem('carid')
+
+
+    this.pur.purchasee(this.Number, this.carunia, this.mut).subscribe((resp : any) => {
+      console.log(resp)
+
+    
+    })
+
+    if(this.Number){
+      alert('წარმატებით შეძენა')
+    }
+
+    else{
+      alert('გთხოვთ გაიაროთ ავთორისაცია')
+    }
+
+  }
+
 
 }
