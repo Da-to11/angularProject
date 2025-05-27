@@ -19,6 +19,7 @@ export class HomeComponent {
     this.rout.params.subscribe(resp => {
       console.log(resp['id'])
       this.carID = resp['id']
+
     })
   }
 
@@ -33,14 +34,17 @@ export class HomeComponent {
   //     this.cars = data
   //   })
   // }
-
+ 
+  
 
 
   ngOnInit(){
     this.api.Carprodact().subscribe((data : any) => {
       console.log(data)
       this.cars = data.data
+      
     })
+
   }
 
   capaCity : string = ""
@@ -68,14 +72,21 @@ export class HomeComponent {
     this.endYear = ""
   }
 
-  Number : any = localStorage.getItem('number')
-  
-  mut : number = 1
+  Number : any 
+  mut : number = 0
+  carunia : number = 0
 
   buy(){
-    this.pur.purchasee(this.Number, this.carID, this.mut).subscribe((resp : any) => {
+
+    this.Number = localStorage.getItem('number')
+    this.mut = 1
+    this.carunia = 523
+
+
+    this.pur.purchasee(this.Number, this.carunia, this.mut).subscribe((resp : any) => {
       console.log(resp)
-      this.cars = resp
+
+    
     })
   }
 
