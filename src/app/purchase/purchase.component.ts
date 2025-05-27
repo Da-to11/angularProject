@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { PurchaseService } from '../services/purchase.service';
-import { Car } from '../Models/car';
+import { paicar } from '../Models/car';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-purchase',
-  imports: [RouterModule],
+  imports: [RouterModule, FormsModule, CommonModule],
   templateUrl: './purchase.component.html',
   styleUrl: './purchase.component.scss'
 })
@@ -13,13 +15,16 @@ export class PurchaseComponent {
 
   constructor(private pur : PurchaseService){}
 
-  cars : Car[] = []
+  cars2 : paicar[] = []
 
-  number : any = localStorage.getItem('number')
+  number : any 
 
   ngOnInit(){
+
+    this.number =  localStorage.getItem('number')
     this.pur.getPur(this.number).subscribe((resp : any) => {
-      this.cars = resp
+      console.log(resp)
+      this.cars2 = resp
     })
   }
 }

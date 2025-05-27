@@ -1,11 +1,13 @@
 <div class="main-purchase">
-    <div class="card">
-        <img src="" alt="">
+    <div *ngFor="let el of cars2" class="card">
+        <div class="ra">
+            <h1>paid</h1>
+        </div>
         <div class="card-body">
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p>{{el.carBrand}}</p>
+            <p>{{el.carModel}}</p>
+            <p>{{el.city}}</p>
+            <p>{{el.pricePaid}}</p>
         </div>
     </div>
 </div>

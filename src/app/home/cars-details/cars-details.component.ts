@@ -17,6 +17,7 @@ export class CarsDetailsComponent {
     this.rout.params.subscribe(car  => {
       console.log(car['id'])
       this.cardId = car['id']
+      localStorage.setItem('carid', car['id'])
     })
 
   }
@@ -33,5 +34,8 @@ export class CarsDetailsComponent {
       this.carProducts = car
     })
   }
+
+
+  
 
 }

@@ -4,6 +4,7 @@ import { LoginAndRegisterService } from '../services/login-and-register.service'
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Token } from '@angular/compiler';
+import { SignalsService } from '../services/signals.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ import { Token } from '@angular/compiler';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  constructor(private log : LoginAndRegisterService){
+  constructor(private log : LoginAndRegisterService, private signal : SignalsService){
 
   }
 
@@ -42,6 +43,7 @@ export class LoginComponent {
       console.log(user)
       localStorage.setItem('token', user.token)
       localStorage.setItem('number', user.phoneNumber)
+      this.signal.logIn()
     })
 
     

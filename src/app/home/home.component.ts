@@ -19,6 +19,7 @@ export class HomeComponent {
     this.rout.params.subscribe(resp => {
       console.log(resp['id'])
       this.carID = resp['id']
+      
 
     })
   }
@@ -74,13 +75,13 @@ export class HomeComponent {
 
   Number : any 
   mut : number = 0
-  carunia : number = 0
+  carunia : any
 
   buy(){
 
     this.Number = localStorage.getItem('number')
     this.mut = 1
-    this.carunia = 523
+    this.carunia = localStorage.getItem('carid')
 
 
     this.pur.purchasee(this.Number, this.carunia, this.mut).subscribe((resp : any) => {
@@ -88,9 +89,9 @@ export class HomeComponent {
 
     
     })
+
+    
   }
-
-
 
 
 }

@@ -1,7 +1,8 @@
 import { CommonModule, ViewportScroller } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, effect } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { SignalsService } from '../services/signals.service';
 
 @Component({
   selector: 'app-header',
@@ -11,23 +12,23 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent {
 
-  constructor(private vps : ViewportScroller){
-
+  constructor(private vps : ViewportScroller, private signal : SignalsService){
+    effect(() => {
+      this.aut = this.signal.loged()
+    })
   }
 
+
+  aut = false
 
   scrol(){
     this.vps.scrollToAnchor('footer')
   }
 
-  
-
-
-  
-
   logout(){
     localStorage.removeItem('token')
-    
+    localStorage.removeItem('number')
+    this.signal.logedOut()
   }
   
 

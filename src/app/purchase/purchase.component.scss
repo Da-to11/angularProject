@@ -1,13 +1,18 @@
 
 .main-purchase{
     width: 100%;
-    height: 783px;
+    height: auto;
     background-color: rgb(54, 54, 54);
-
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    padding: 10px 0px 10px 0px;
+    gap: 30px;
     .card{
-        width: 300px;
-        height: 350px;
+        width: 250px;
+        height: 200px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -16,28 +21,31 @@
         border-radius: 10px;
         background-color: rgb(54, 54, 54);
 
-        img{
+        .ra{
             width: 100%;
-            height: 70%;
+            height: 150px;
+            background-color: white;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
-            cursor: pointer;
-            
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
 
         .card-body{
             width: 100%;
-            height: 30%;
+            height: 100px;
             background-color: white;
-            border-bottom-right-radius: 10px;
-            border-bottom-left-radius: 10px;
             background-color: rgb(20, 20, 20);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
             color: white;
             padding: 10px 0px 0px 10px;
             display: flex;
             justify-content: space-between;
-            
+            flex-direction: column;
+            text-align: center;
 
         }
     }

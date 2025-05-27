@@ -15,3 +15,13 @@ export class Car{
     fuelCapacity?: number;
     city?: string;
 }
+
+
+
+export class paicar{
+    carBrand?: string;
+    carId!: number;
+    carModel?: string;
+    city?: string;
+    pricePaid?: number
+}
