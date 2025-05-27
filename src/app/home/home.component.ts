@@ -68,8 +68,16 @@ export class HomeComponent {
     this.endYear = ""
   }
 
+  Number : any = localStorage.getItem('number')
+  
+  mut : number = 1
 
-
+  buy(){
+    this.pur.purchasee(this.Number, this.carID, this.mut).subscribe((resp : any) => {
+      console.log(resp)
+      this.cars = resp
+    })
+  }
 
 
 

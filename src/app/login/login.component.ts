@@ -41,6 +41,7 @@ export class LoginComponent {
     this.log.login(registered).subscribe((user : any) => {
       console.log(user)
       localStorage.setItem('token', user.token)
+      localStorage.setItem('number', user.phoneNumber)
     })
 
     

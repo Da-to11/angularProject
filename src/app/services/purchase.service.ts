@@ -10,13 +10,13 @@ export class PurchaseService {
 
 
 
-  purchasee(){
-    this.purchase.post(`https://rentcar.stepprojects.ge/Purchase/purchase?phoneNumber=1234123412345&carId=520&multiplier=1`, null)
+  purchasee(usernumber : any, carID : number, mult : number ){
+    return this.purchase.post(`https://rentcar.stepprojects.ge/Purchase/purchase?phoneNumber=${usernumber}&carId=${carID}&multiplier=${mult}`, null)
   }
 
 
-  getPur(){
-    this.purchase.get('https://rentcar.stepprojects.ge/Purchase/1234123412345')
+  getPur(usernumber : string){
+    return this.purchase.get(`https://rentcar.stepprojects.ge/Purchase/${usernumber}`)
   }
 
 }
