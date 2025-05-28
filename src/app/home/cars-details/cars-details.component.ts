@@ -63,7 +63,7 @@ export class CarsDetailsComponent {
     }
 
     else{
-      alert('გთხოვთ გაიაროთ ავთორისაცია')
+      alert('გთხოვთ გაიაროთ ავტორისაცია')
     }
 
   }
