@@ -28,6 +28,9 @@ export class HeaderComponent {
   logout(){
     localStorage.removeItem('token')
     localStorage.removeItem('number')
+    localStorage.removeItem('firstnam')
+    localStorage.removeItem('lastnam')
+    localStorage.removeItem('emaill')
     this.signal.logedOut()
   }
   

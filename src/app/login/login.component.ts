@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { LoginAndRegisterService } from '../services/login-and-register.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -13,7 +13,7 @@ import { SignalsService } from '../services/signals.service';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  constructor(private log : LoginAndRegisterService, private signal : SignalsService){
+  constructor(private log : LoginAndRegisterService, private signal : SignalsService, private router : Router){
 
   }
 
@@ -43,6 +43,9 @@ export class LoginComponent {
       console.log(user)
       localStorage.setItem('token', user.token)
       localStorage.setItem('number', user.phoneNumber)
+      localStorage.setItem('emaill', user.email)
+      localStorage.setItem('firstnam', user.firstName)
+      localStorage.setItem('lastnam', user.lastName)
       this.signal.logIn()
     })
 
@@ -52,6 +55,8 @@ export class LoginComponent {
     this.email = ""
     this.phoneNumber = ""
     this.password = ""
+
+    this.router.navigate(['/home'])
 
     }
 

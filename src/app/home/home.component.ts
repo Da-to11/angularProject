@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, effect } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Car } from '../Models/car';
 import { ApiService } from '../services/api.service';
 import { PurchaseComponent } from '../purchase/purchase.component';
 import { PurchaseService } from '../services/purchase.service';
+import { SignalsService } from '../services/signals.service';
 
 @Component({
   selector: 'app-home',
@@ -15,14 +16,22 @@ import { PurchaseService } from '../services/purchase.service';
 })
 export class HomeComponent {
 
-  constructor(private api : ApiService, private rout : ActivatedRoute, private pur : PurchaseService ){
+  constructor(private api : ApiService, private rout : ActivatedRoute, private signal : SignalsService ){
     this.rout.params.subscribe(resp => {
       console.log(resp['id'])
       this.carID = resp['id']
       
 
     })
+
+    effect(() => {
+      this.aut = this.signal.loged()
+    })
+
   }
+
+
+  aut = false
 
   carID = 0
 

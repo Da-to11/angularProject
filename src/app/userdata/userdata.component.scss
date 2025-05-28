@@ -1,0 +1,29 @@
+
+.userdata-main{
+    width: 100%;
+    height: 100vh;
+    margin-top: 80px;
+    background-color: rgb(54, 54, 54);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .userdata-card{
+        width: 250px;
+        height: 350px;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+        flex-direction: column;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    i{
+        font-size: 50px;
+    }
+}

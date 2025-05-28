@@ -46,6 +46,26 @@
         transition: 400ms;
     }
 
+    .user-data{
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        left: 10px;
+        top: 610px;
+        font-size: 37px;
+        background-color: rgb(54, 54, 54);
+        color: white;
+        cursor: pointer;
+    }
+
+    .user-data:hover{
+        background-color: black;
+        transition: 400ms;  
+    }
 
 
     .card{

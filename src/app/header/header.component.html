@@ -17,7 +17,7 @@
         <ul>
             <li (click)="scrol()" ><a><i class="fa-solid fa-phone"></i>კონტაქტები</a></li>
             <li *ngIf="!aut" routerLink="/register" ><a><i class="fa-solid fa-user"></i>რეგისტრაცია</a></li>
-            <li *ngIf="aut" ><a (click)="logout()" href="">გასვლა</a></li>
+            <li *ngIf="aut" ><a (click)="logout()" href=""><i class="fa-solid fa-door-open"></i>გასვლა</a></li>
         </ul>
     </nav>
 </div>

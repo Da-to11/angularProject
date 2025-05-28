@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { LoginAndRegisterService } from '../services/login-and-register.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { LoginAndRegisterService } from '../services/login-and-register.service'
   styleUrl: './regist.component.scss'
 })
 export class RegistComponent {
-  constructor(private rout : ActivatedRoute, private reg : LoginAndRegisterService){ 
+  constructor(private rout : ActivatedRoute, private reg : LoginAndRegisterService, private router : Router){ 
     
   }
 
@@ -45,6 +45,6 @@ export class RegistComponent {
     this.phoneNumber = ""
     this.password = ""
 
-    
+    this.router.navigate(['/login'])
   }
 }
