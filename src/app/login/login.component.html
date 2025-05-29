@@ -9,7 +9,7 @@
          <input name="ema" [(ngModel)]="email" type="email" placeholder="ელფოსტის მისამართი" required>
          <input name="numb" [(ngModel)]="phoneNumber" type="number" placeholder="ტელეფონის ნომერი" required>
          <input name="pass" [(ngModel)]="password" type="password" placeholder="პაროლი" required>
-         <button (click)="logIn()" class="btn" ><h3>შესვლა</h3></button>
+         <button type="submit" (click)="logIn()" class="btn" ><h3>შესვლა</h3></button>
          <div class="p-parent">
             <p class="ss" >არ ხართ რეგისტრირებული?</p><p routerLink="/register" class="S" >რეგისტრაცია</p>
          </div>
